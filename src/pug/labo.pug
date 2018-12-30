@@ -1,0 +1,26 @@
+doctype
+html(lang="ja")
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title やまはれ
+    link(rel='stylesheet', href="css/style.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Kosugi+Maru")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+  body
+    #app
+      .l-header
+        .l-header__logo Yamahare
+        a.l-header__item(href="./")
+          i.fas.fa-home home
+        a.l-header__item.is-active(href="./labo.html")
+          i.fas.fa-flask labo
+      .l-contents
+        h1 ラボラトリー
+        p(v-text="message")
+
+        button.c-button--primary(@click="showModal=true") クリック！
+
+        modal(v-show="showModal" @close="showModal=false")
+
+    script(src="js/labo.js")

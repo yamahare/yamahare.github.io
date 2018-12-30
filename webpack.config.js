@@ -1,13 +1,14 @@
 const path = require('path');
 const env = process.env.NODE_ENV
+const entry = require('webpack-glob-entry');
 const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   mode: env || 'development',
-  entry: './src/js/main.js',
+  entry: entry("./src/js/*.js"),
   output: {
     path: path.resolve(__dirname,  './public/js/'),
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   // 拡張子が.jsのファイルはbabel-loaderを通してビルド(node_modulesは除外)
   module: {

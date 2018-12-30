@@ -1,0 +1,28 @@
+.l-header{
+  height: 4rem;
+  background-color: #f7f7db;
+  border-top: 10px solid #00a0ed;
+  display: flex;
+
+  &__logo{
+    font-size: 2rem;
+    line-height: 4rem;
+    padding: 0 0.5rem;
+    display: inline-block;
+  }
+
+  &__item{
+    font-size: 1rem;
+    line-height: 4rem;
+    padding: 0 0.5rem;
+    display: inline-block;
+    &:hover{
+      opacity: 0.5;
+    }
+    &.is-active{
+      color: red;
+      border-bottom: 4px solid #ff0101;
+    }
+  }
+}
+

@@ -6,7 +6,7 @@ const { paths } = require('./config')
 
 // キャッシュ対策のためfile名にhashをつける
 function add_hash () {
-  const excepHtml = filter(['**/*', '!**/index.html'], {restore: true});
+  const excepHtml = filter(['**/*', '!**/*.html'], {restore: true});
 
   return gulp.src(paths.manifest.src)
     .pipe(excepHtml)

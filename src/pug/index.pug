@@ -9,7 +9,13 @@ html(lang="ja")
     link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
   body
     #app
-      .l-main
+      .l-header
+        .l-header__logo Yamahare
+        a.l-header__item.is-active(href="./")
+          i.fas.fa-home home
+        a.l-header__item(href="./labo.html")
+          i.fas.fa-flask labo
+      .l-contents
         h1 やまはれについて👽
         .c-card
           img.c-card__userimg(src="image/yamahare.jpg")
@@ -31,8 +37,4 @@ html(lang="ja")
         p(v-text="message")
         test
 
-        button.c-button--primary(@click="showModal=true") クリック！
-
-        modal(v-show="showModal" @close="showModal=false")
-
-    script(src="js/bundle.js")
+    script(src="js/main.js")
