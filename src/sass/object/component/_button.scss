@@ -1,14 +1,21 @@
 .c-button {
+  font-size: 1rem;
   display: inline-block;
   margin: 1rem;
-  background-color: red;
+  padding: 0.5rem;
   cursor: pointer;
   border-radius: 0.5rem;
-  padding: 0.5rem;
-  color: #FFF;
   text-decoration: none;
-  &:hover{
-    background-color: #f9c500;
-  }
+  outline: none;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4);
 }
 
+.c-button--primary{
+  @extend .c-button;
+  color: white;
+  background-color: $primary_color;
+  &:hover{
+    transition-duration: 0.5s;
+    background-color: darken($primary_color, 15%);
+  }
+}

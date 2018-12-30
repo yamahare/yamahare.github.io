@@ -1,12 +1,12 @@
 <template lang="pug">
   transition
-    .modal.is-active
-      .modal-background(@click="$emit('close')")
-      .modal-content
-        .box
-          p {{ greeting }}
-      button.modal-close.is-large(aria-label="close"
-                                  @click="$emit('close')")
+    .c-modal__overlay
+      .c-modal__content
+        i.fas.fa-snowflake.fa-spin
+        p {{ greeting }}
+        .c-modal__close(@click="$emit('close')")
+          i.fas.fa-times
+      .c-modal__background(@click="$emit('close')")
 </template>
 
 <script>
@@ -20,8 +20,9 @@ export default{
 </script>
 
 <style scoped>
-  p {
-    color: blue;
+  .fa-snowflake {
+    color: cornflowerblue;
+    font-size: 3rem;
   }
   .v-enter-active, v-leave-active{
     transition: opacity .3s

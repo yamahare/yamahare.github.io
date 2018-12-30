@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#app',
     data: {
-      message: "↓出るぞ↓",
+      message: "🌆🍷🙆",
       showModal: false
     },
     components: {
